@@ -25,7 +25,7 @@ function App() {
     for (let i = 0; i < length; i++) {
       const randomIndex = Math.floor(Math.random() * characters.length);
       generatedPassword += characters[randomIndex];
-      // console.log(randomIndex);
+      console.log(randomIndex);
     }
 
     setPassword(generatedPassword);
@@ -59,7 +59,7 @@ function App() {
           className="m-x"
           type="number"
           value={length}
-          onChange={(e) => setLength(e.target.value)}
+          onChange={(e) => setLength(parseInt(e.target.value, 10) || "")}
         ></input>
       </div>
 
